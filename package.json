@@ -1,11 +1,12 @@
 {
-  "bin": {
-    "ts-node-starter": "dist/cli.js"
-  },
   "bugs": {
-    "url": "https://github.com/bennycode/ts-node-starter/issues"
+    "url": "https://github.com/bennycode/typechat-demo/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.3.34",
+    "dotenv": "^16.3.1",
+    "typechat": "^0.0.10"
+  },
   "description": "",
   "devDependencies": {
     "@evilmartians/lefthook": "^1.4.5",
@@ -30,15 +31,15 @@
     "dist",
     "!dist/**/*.test.*"
   ],
-  "homepage": "https://www.npmjs.com/package/ts-node-starter",
+  "homepage": "https://www.npmjs.com/package/typechat-demo",
   "keywords": [],
   "license": "UNLICENSED",
   "main": "dist/index.js",
-  "name": "@bennycode/ts-node-starter",
+  "name": "@bennycode/typechat-demo",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bennycode/ts-node-starter.git"
+    "url": "git+https://github.com/bennycode/typechat-demo.git"
   },
   "scripts": {
     "build": "tsc",
@@ -50,19 +51,20 @@
     "dev": "node --inspect -r ts-node/register ./src/start.ts",
     "docs": "exit 0",
     "fix": "npm run fix:format && npm run fix:lint",
-    "fix:format": "npm run check:format --write",
-    "fix:lint": "npm run check:lint --fix --quiet",
+    "fix:format": "npm run check:format -- --write",
+    "fix:lint": "npm run check:lint -- --fix --quiet",
     "log": "git add CHANGELOG.md && git commit -m \"docs: updated CHANGELOG.md\"",
     "postversion": "git push origin && git push origin --tags && npm publish --access public",
     "preversion": "git checkout main && git pull && npm run && npm run test && npm run dist",
     "release:major": "generate-changelog -M -x \"chore,test\" && npm run log && npm version major",
     "release:minor": "generate-changelog -m -x \"chore,test\" && npm run log && npm version minor",
     "release:patch": "generate-changelog -p -x \"chore,test\" && npm run log && npm version patch",
-    "start": "ts-node ./src/start.ts",
+    "start": "ts-node-esm ./src/start.ts",
     "test": "npm run test:types && npm run test:unit:coverage",
     "test:types": "tsc --noEmit",
     "test:unit": "cross-env NODE_ENV=test jest ./src --passWithNoTests",
     "test:unit:coverage": "npm run test:unit -- --coverage"
   },
+  "type": "module",
   "version": "0.0.0"
 }
