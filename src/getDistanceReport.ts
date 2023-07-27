@@ -10,10 +10,10 @@ export async function getDistanceReport({origin, destination, mode}: Travel): Pr
 
   const response = await client.distancematrix({
     params: {
-      key,
-      origins: [origin],
       destinations: [destination],
+      key,
       mode,
+      origins: [origin],
     },
   });
 
