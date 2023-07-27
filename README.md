@@ -1,4 +1,6 @@
-# TypeChat Demo
+# TypeChat Demo: Travel Time
+
+Provide the travel duration for various locations using diverse transportation methods.
 
 - https://console.cloud.google.com/apis/credentials
 - https://www.npmjs.com/package/@googlemaps/google-maps-services-js

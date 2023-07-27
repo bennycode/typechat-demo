@@ -1,8 +1,8 @@
 import {Client} from '@googlemaps/google-maps-services-js';
 import {assertMode} from './assertMode.ts';
-import type {Travel} from './schema';
+import type {Travel} from './schema.ts';
 
-export async function getDistanceReport({origin, destination, mode}: Travel): Promise<string> {
+export async function reportTravelDuration({origin, destination, mode}: Travel) {
   const key = `${process.env.GOOGLE_MAPS_API_KEY}`;
   const client = new Client();
 
