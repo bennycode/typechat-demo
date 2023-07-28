@@ -5,8 +5,8 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 import {createJsonTranslator, createLanguageModel, processRequests} from 'typechat';
-import {Travel} from './schema.ts';
-import {reportTravelDuration} from './reportTravelDuration.ts';
+import {Travel} from './schema.js';
+import {reportTravelDuration} from './reportTravelDuration.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
