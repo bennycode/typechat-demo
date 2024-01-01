@@ -3,7 +3,7 @@
     "url": "https://github.com/bennycode/typechat-demo/issues"
   },
   "dependencies": {
-    "@googlemaps/google-maps-services-js": "^3.3.41",
+    "@googlemaps/google-maps-services-js": "^3.3.42",
     "dotenv": "^16.3.1",
     "typechat": "^0.0.10"
   },
